@@ -10,7 +10,7 @@ export default CancleButton;
 
 const StyledButton = styled.button`
     outline: none;
-    width: 100%;
+    width: 20%;
     border: none;
     padding: 0.4rem 1rem;
     border-radius: 4px;
