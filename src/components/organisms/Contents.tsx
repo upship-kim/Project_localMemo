@@ -22,6 +22,5 @@ const Style = styled.div`
     justify-content: center;
     align-items: center;
     row-gap: 1rem;
-    height: 60vh;
-    padding: 0;
+    width: 100%;
 `;
