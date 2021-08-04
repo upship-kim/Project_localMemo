@@ -5,7 +5,7 @@ import AccessButton from '../atoms/AccessButton';
 import Header from '../organisms/Header';
 import List from '../organisms/List';
 
-const MainTemp = ({ list }: list) => (
+const MainTemp = ({ list, setList }: list) => (
     <Style>
         <TopRow>
             <Header />
@@ -16,7 +16,7 @@ const MainTemp = ({ list }: list) => (
                 to="/write"
             />
         </TopRow>
-        <List list={list} />
+        <List list={list} setList={setList} />
     </Style>
 );
 

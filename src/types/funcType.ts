@@ -16,6 +16,7 @@ export type form = {
 
 export type list = {
     list: form[];
+    setList: React.Dispatch<React.SetStateAction<form[]>>;
 };
 
 export type write = {

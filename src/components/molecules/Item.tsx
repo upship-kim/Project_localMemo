@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { form } from '../../types/funcType';
+import CancleButton from '../atoms/CancleButton';
 import SmallText from '../atoms/SmallText';
 import SubTitleText from '../atoms/SubTitleText';
 

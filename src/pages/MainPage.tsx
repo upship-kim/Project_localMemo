@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import MainTemp from '../components/templates/MainTemp';
 import { list } from '../types/funcType';
 
-const MainPage = ({ list }: list) => {
+const MainPage = ({ list, setList }: list) => {
     return (
         <Container>
             <Style>
-                <MainTemp list={list} />
+                <MainTemp list={list} setList={setList} />
             </Style>
         </Container>
     );

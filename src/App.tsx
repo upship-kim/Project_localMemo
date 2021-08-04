@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import WritePage from './pages/WritePage';
 import MainPage from './pages/MainPage';
@@ -12,7 +12,7 @@ function App() {
     return (
         <Switch>
             <Route exact path="/">
-                <MainPage list={list} />
+                <MainPage list={list} setList={setList} />
             </Route>
             <Route exact path="/write">
                 <WritePage
