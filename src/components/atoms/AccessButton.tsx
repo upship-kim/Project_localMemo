@@ -2,8 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { ButtonType } from '../../types/atomType';
 
-const AccessButton = ({ text, ...props }: ButtonType) => {
-    return <StyledButton {...props}>{text}</StyledButton>;
+const AccessButton = ({ text, height, ...props }: ButtonType) => {
+    return (
+        <StyledButton {...props} style={{ height: `${height}%` }}>
+            {text}
+        </StyledButton>
+    );
 };
 
 export default AccessButton;

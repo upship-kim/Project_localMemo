@@ -1,32 +1,20 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import MainTemp from '../components/templates/MainTemp';
 import WriteTemp from '../components/templates/WriteTemp';
 import { temp } from '../types/funcType';
 
-const WritePage = () => {
-    const [form, setForm] = useState({ title: '', body: '' });
-
-    const onSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
-        e.preventDefault();
-    };
-    const onChange = (
-        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-    ) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
-    };
-
+const MainPage = () => {
     return (
         <Container>
             <Style>
-                <form onSubmit={onSubmit}>
-                    <WriteTemp onChange={onChange} form={form} />
-                </form>
+                <MainTemp />
             </Style>
         </Container>
     );
 };
 
-export default WritePage;
+export default MainPage;
 const Container = styled.div`
     padding: 5rem;
     width: 100%;

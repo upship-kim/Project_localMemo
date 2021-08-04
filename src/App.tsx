@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import WritePage from './pages/WritePage';
+import MainPage from './pages/MainPage';
 
 function App() {
     useEffect(() => {
@@ -9,7 +10,7 @@ function App() {
 
     return (
         <div>
-            <WritePage />
+            <MainPage />
         </div>
     );
 }

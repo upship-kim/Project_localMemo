@@ -1,3 +1,5 @@
+import { StyledComponentProps } from 'styled-components';
+
 export type TextType = {
     text: string;
 };
@@ -5,6 +7,7 @@ export type ButtonType = {
     type: 'submit' | 'button';
     text: string;
     onClick?: () => void;
+    height?: number;
 };
 
 export type InputType = {
