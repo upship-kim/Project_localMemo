@@ -11,6 +11,7 @@ const WritePage = ({ list, setList, id, setId }: write) => {
     const onSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
         e.preventDefault();
         setList([form, ...list]);
+        localStorage.setItem('data', JSON.stringify(list));
         console.log(form);
         setId(() => id + 1);
         history.push('/');

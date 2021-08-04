@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import WritePage from './pages/WritePage';
 import MainPage from './pages/MainPage';
@@ -8,7 +8,20 @@ import { form } from './types/funcType';
 function App() {
     const [list, setList] = useState<form[]>([]);
     const [id, setId] = useState<number>(1);
-    console.log(JSON.parse(JSON.stringify(list)));
+
+    useEffect(() => {
+        const LoadList = localStorage.getItem('data');
+        if (LoadList !== null) {
+            const ParseList = JSON.parse(LoadList);
+            setList(ParseList);
+            console.log(ParseList);
+            setId(ParseList.length + 1);
+        }
+    }, []);
+    useEffect(() => {
+        localStorage.setItem('data', JSON.stringify(list));
+    }, [list]);
+
     return (
         <Switch>
             <Route exact path="/">
