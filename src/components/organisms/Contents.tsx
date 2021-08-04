@@ -1,14 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import { temp } from '../../types/funcType';
 import TextBox from '../atoms/TextBox';
 import TitleInput from '../atoms/TitleInput';
 import ButtonRow from '../molecules/ButtonRow';
 
-const Contents = () => {
+const Contents = ({ onChange, form }: temp) => {
     return (
         <Style>
-            <TitleInput placeholder="title을 입력하세요" />
-            <TextBox />
+            <TitleInput
+                placeholder="title을 입력하세요"
+                name="title"
+                onChange={onChange}
+                value={form.title}
+            />
+            <TextBox name="body" onChange={onChange} value={form.body} />
             <ButtonRow />
         </Style>
     );

@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import { temp } from '../../types/funcType';
 import Contents from '../organisms/Contents';
 import Header from '../organisms/Header';
 
-const WriteTemp = () => {
+const WriteTemp = ({ onChange, form }: temp) => {
     return (
         <Style>
             <Header />
-            <Contents />
+            <Contents onChange={onChange} form={form} />
         </Style>
     );
 };
