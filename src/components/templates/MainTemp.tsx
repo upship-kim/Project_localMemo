@@ -1,16 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
+import { list } from '../../types/funcType';
 import AccessButton from '../atoms/AccessButton';
 import Header from '../organisms/Header';
 import List from '../organisms/List';
 
-const MainTemp = () => (
+const MainTemp = ({ list }: list) => (
     <Style>
         <TopRow>
             <Header />
-            <AccessButton text={'글쓰기'} type="button" height={10} />
+            <AccessButton
+                text={'글쓰기'}
+                type="button"
+                height={10}
+                to="/write"
+            />
         </TopRow>
-        <List />
+        <List list={list} />
     </Style>
 );
 

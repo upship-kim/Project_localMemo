@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import MainTemp from '../components/templates/MainTemp';
-import WriteTemp from '../components/templates/WriteTemp';
-import { temp } from '../types/funcType';
+import { list } from '../types/funcType';
 
-const MainPage = () => {
+const MainPage = ({ list }: list) => {
     return (
         <Container>
             <Style>
-                <MainTemp />
+                <MainTemp list={list} />
             </Style>
         </Container>
     );

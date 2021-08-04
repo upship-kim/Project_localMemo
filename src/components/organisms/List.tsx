@@ -1,12 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import { form, list } from '../../types/funcType';
+import SubTitleText from '../atoms/SubTitleText';
 import Item from '../molecules/Item';
 
-const List = () => {
+const List = ({ list }: list) => {
     return (
         <Style>
-            <Item />
-            <Item />
+            {list &&
+                list.map((item: form, index) => (
+                    <Item key={index} title={item.title} body={item.body} />
+                ))}
+
+            {list.length === 0 && (
+                <SubTitleText text="새 메모를 작성해보세요 :)" />
+            )}
         </Style>
     );
 };

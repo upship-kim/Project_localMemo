@@ -8,6 +8,7 @@ export type ButtonType = {
     text: string;
     onClick?: () => void;
     height?: number;
+    to?: string;
 };
 
 export type InputType = {

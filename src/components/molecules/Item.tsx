@@ -1,13 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
+import { form } from '../../types/funcType';
 import SmallText from '../atoms/SmallText';
 import SubTitleText from '../atoms/SubTitleText';
 
-const Item = () => {
+type props = {
+    title: string;
+    body: string;
+};
+const Item = ({ title, body }: props) => {
     return (
         <Style>
-            <SubTitleText text="title" />
-            <SmallText text={'body'} />
+            <SubTitleText text={title} />
+            <SmallText text={body} />
         </Style>
     );
 };
