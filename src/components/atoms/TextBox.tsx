@@ -15,5 +15,5 @@ const Style = styled.textarea`
     border-radius: 4px;
     border: none;
     padding: 0.4rem 1rem;
-    height: 40vh;
+    height: 20vh;
 `;

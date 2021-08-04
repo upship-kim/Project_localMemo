@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import Contents from '../organisms/Contents';
+import Header from '../organisms/Header';
 
 const WriteTemp = () => {
     return (
         <Style>
+            <Header />
             <Contents />
         </Style>
     );
@@ -18,7 +20,5 @@ const Style = styled.div`
     justify-content: center;
     width: 100%;
     align-items: flex-start;
-    height: 60vh;
-    background: #cecece;
-    padding: 2rem;
+    padding: 0 2rem 2rem 2rem;
 `;

@@ -10,4 +10,5 @@ export default TitleText;
 
 const Style = styled.h1`
     color: #444444;
+    margin-bottom: 0.4rem;
 `;

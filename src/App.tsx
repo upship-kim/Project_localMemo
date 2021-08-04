@@ -1,20 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
-import Header from './components/organisms/Header';
-import Contents from './components/organisms/Contents';
-import WriteTemp from './components/templates/WriteTemp';
+import WritePage from './pages/WritePage';
 
 function App() {
-    const hello: string = 'hello';
-    const [state, setState] = useState('');
     useEffect(() => {
         console.log('re-rendering');
     }, []);
 
     return (
         <div>
-            <Header />
-            <WriteTemp />
+            <WritePage />
         </div>
     );
 }
