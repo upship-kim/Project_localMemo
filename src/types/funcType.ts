@@ -9,13 +9,18 @@ export type temp = {
 };
 
 export type form = {
+    id: number;
     title: string;
     body: string;
 };
 
 export type list = {
     list: form[];
-    setList?: React.Dispatch<React.SetStateAction<never[]>>;
 };
 
-export type setList = {};
+export type write = {
+    list: form[];
+    setList: React.Dispatch<React.SetStateAction<form[]>>;
+    id: number;
+    setId: React.Dispatch<React.SetStateAction<number>>;
+};

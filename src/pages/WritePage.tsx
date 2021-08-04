@@ -2,27 +2,23 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import styled from 'styled-components';
 import WriteTemp from '../components/templates/WriteTemp';
-import { form } from '../types/funcType';
+import { form, write } from '../types/funcType';
 
-type write = {
-    list: form[];
-    setList: React.Dispatch<React.SetStateAction<form[]>>;
-};
-
-const WritePage = ({ list, setList }: write) => {
+const WritePage = ({ list, setList, id, setId }: write) => {
     const history = useHistory();
-    const [form, setForm] = useState({ title: '', body: '' });
 
+    const [form, setForm] = useState<form>({ id: id, title: '', body: '' });
     const onSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
         e.preventDefault();
         setList([form, ...list]);
         console.log(form);
+        setId(() => id + 1);
         history.push('/');
     };
     const onChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     ) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
+        setForm({ ...form, id: id, [e.target.name]: e.target.value });
     };
 
     return (
