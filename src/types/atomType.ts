@@ -23,4 +23,5 @@ export type TextBoxType = {
     name?: string;
     value?: string | number;
     onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+    children?: React.ReactNode;
 };

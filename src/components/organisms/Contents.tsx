@@ -14,7 +14,9 @@ const Contents = ({ onChange, form }: temp) => {
                 onChange={onChange}
                 value={form.title}
             />
-            <TextBox name="body" onChange={onChange} value={form.body} />
+            <TextBox name="body" onChange={onChange}>
+                {form.body}
+            </TextBox>
             <ButtonRow />
         </Style>
     );

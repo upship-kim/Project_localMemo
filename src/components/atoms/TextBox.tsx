@@ -2,8 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { TextBoxType } from '../../types/atomType';
 
-const TextBox = ({ value, ...props }: TextBoxType) => {
-    return <Style {...props}>{value}</Style>;
+const TextBox = ({ value, children, ...props }: TextBoxType) => {
+    return (
+        <Style {...props} placeholder="내용을 입력하세요">
+            {children ? children : value}
+        </Style>
+    );
 };
 
 export default TextBox;
